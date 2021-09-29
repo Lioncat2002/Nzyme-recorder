@@ -22,6 +22,7 @@ const createWindow = () => {
   });
   require("@electron/remote/main").enable(mainWindow.webContents) ;
   // and load the index.html of the app.
+  mainWindow.setMenu(null);
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
